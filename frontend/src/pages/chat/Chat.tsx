@@ -9,8 +9,8 @@ import uuid from 'react-uuid';
 import { isEmpty } from "lodash-es";
 
 import styles from "./Chat.module.css";
-// import Azure from "../../assets/Azure.svg";
-import Azure from "../../assets/blockchain_nrw.png";
+import Azure from "../../assets/Azure.svg";
+import BlockchainNRW from "../../assets/blockchain_nrw.png";
 
 import {
     ChatMessage,
@@ -577,12 +577,13 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={Azure}
+                                    //src={Azure}
+                                    src={BlockchainNRW} // custom logo
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Start a conversation!</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h1 className={styles.chatEmptyStateTitle}>Was möchtest Du über Web3 wissen?</h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}>Dieser Chatbot wurde mit Dokumenten zum Thema Web3 konfiguriert.</h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
