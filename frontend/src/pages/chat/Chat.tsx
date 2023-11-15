@@ -10,7 +10,7 @@ import { isEmpty } from "lodash-es";
 
 import styles from "./Chat.module.css";
 import Azure from "../../assets/Azure.svg";
-import BlockchainNRW from "../../assets/blockchain_nrw.png";
+import BlockchainNRW from "../../assets/blockchain_nrw.svg";
 
 import {
     ChatMessage,
@@ -561,7 +561,7 @@ const Chat = () => {
             {showAuthMessage ? (
                 <Stack className={styles.chatEmptyState}>
                     <ShieldLockRegular className={styles.chatIcon} style={{color: 'darkorange', height: "200px", width: "200px"}}/>
-                    <h1 className={styles.chatEmptyStateTitle}>Authentication Not Configured Immer NOCH </h1>
+                    <h1 className={styles.chatEmptyStateTitle}>Authentication Not Configured</h1>
                     <h2 className={styles.chatEmptyStateSubtitle}>
                         This app does not have authentication configured. Please add an identity provider by finding your app in the 
                         <a href="https://portal.azure.com/" target="_blank"> Azure Portal </a>
@@ -577,8 +577,7 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    //src={Azure}
-                                    src={BlockchainNRW} // custom logo
+                                    src={BlockchainNRW}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
