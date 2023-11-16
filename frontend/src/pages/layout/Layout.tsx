@@ -9,6 +9,9 @@ import { HistoryButton, ShareButton } from "../../components/common/Button";
 import { AppStateContext } from "../../state/AppProvider";
 import { CosmosDBStatus } from "../../api";
 
+
+
+
 const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
     root: {
       width: 86,
@@ -84,10 +87,11 @@ const Layout = () => {
                         </Link>
                     </Stack>
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
-                            {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
-                                <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"}/>    
+{/*                             {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
+                                <HistoryButton onClick={handleHistoryClick} 
+                                text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"}/>    
                              }
-                           <ShareButton onClick={handleShareClick} />
+                           <ShareButton onClick={handleShareClick} /> */}
                     </Stack>
 
                 </Stack>
